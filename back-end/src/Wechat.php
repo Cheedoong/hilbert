@@ -34,12 +34,12 @@
       if (!$this->validateSignature($token)) {
         exit('签名验证失败');
       }
-      
+
       if ($this->isValid()) {
         // 网址接入验证
         exit($_GET['echostr']);
       }
-      
+
       if (!isset($GLOBALS['HTTP_RAW_POST_DATA'])) {
         exit('缺少数据');
       }
@@ -73,7 +73,7 @@
       if ( ! (isset($_GET['signature']) && isset($_GET['timestamp']) && isset($_GET['nonce']))) {
         return FALSE;
       }
-      
+
       $signature = $_GET['signature'];
       $timestamp = $_GET['timestamp'];
       $nonce = $_GET['nonce'];
@@ -150,28 +150,28 @@
      * 收到自定义菜单消息时触发，用于子类重写
      *
      * @return void
-     */    
+     */
     protected function onClick() {}
 
     /**
      * 收到地理位置事件消息时触发，用于子类重写
      *
      * @return void
-     */    
+     */
     protected function onEventLocation() {}
 
     /**
      * 收到语音消息时触发，用于子类重写
      *
      * @return void
-     */        
+     */
     protected function onVoice() {}
 
     /**
      * 扫描二维码时触发，用于子类重写
      *
      * @return void
-     */        
+     */
     protected function onScan() {}
 
     /**
