@@ -1,4 +1,4 @@
-# itp
-ITP-home
+# Fast Hilbert Curve Generation, Sorting, and Range Queries
+`hibert.c` and `hilbert.h`
 
-Our project in Tencent Hackathon 2015. 
+A hilbert mapping implementation in C, without recursion.  
